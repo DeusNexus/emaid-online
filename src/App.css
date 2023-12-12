@@ -583,7 +583,7 @@
     font-size: 15px;
 }
 
-.app.flash {
+.refresh-status-div.flash {
     animation: flash 0.2s infinite alternate ease-in-out;
 }
 

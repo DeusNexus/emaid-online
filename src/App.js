@@ -73,7 +73,7 @@ function App() {
   }, []);
 
   return (
-    <div className={`app ${flash ? 'flash' : ''}`}>
+    <div className='app'>
         <div className='titles'>
           <p className='safe-title'>Safe Network: Privacy. Security. Freedom.</p>
           <p className='safe-undertitle'>Users of the SAFE Network have full control over their data, while software developers can focus their time building on top of a secure infrastructure.</p>
@@ -103,7 +103,7 @@ function App() {
           </div>
         </div>
 
-        <div className='refresh-status-div'>
+        <div className={`refresh-status-div ${flash ? 'flash' : ''}`}>
           <div className='refresh-div'>
             <p>Last updated UTC: </p>
             <p>{lastUpdate}</p>
