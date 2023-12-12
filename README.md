@@ -57,9 +57,9 @@ API Endpoints
     /api: Fetches real-time data including burned MAID, pending eMAID transactions, and more.
 
 ## External Links
-    eMAID Gnosis Minting Queue: https://app.safe.global/eth:0x981B048fec7CB1ADE6e331691DF339c2F833D165/transactions/queue
-    eMAID Ethereum Contract: https://etherscan.io/token/0x329c6e459ffa7475718838145e5e85802db2a303
-    Omni MAID Burn Address: https://www.omniexplorer.info/address/1LastStepBurnMaidToEMaidXXXXUJ9ChK
+eMAID Gnosis Minting Queue: https://app.safe.global/eth:0x981B048fec7CB1ADE6e331691DF339c2F833D165/transactions/queue
+eMAID Ethereum Contract: https://etherscan.io/token/0x329c6e459ffa7475718838145e5e85802db2a303
+Omni MAID Burn Address: https://www.omniexplorer.info/address/1LastStepBurnMaidToEMaidXXXXUJ9ChK
 
 ## Dependencies
     React
