@@ -584,7 +584,7 @@
 }
 
 .app.flash {
-    animation: flash 1s infinite alternate;
+    animation: flash 0.2s infinite alternate;
 }
   
 @keyframes flash {
