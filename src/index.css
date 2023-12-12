@@ -1,0 +1,18 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Radio Canada', sans-serif;
+    font-size: 24px; 
+}
+
+html {
+    overflow-y: overlay;
+}
+
+body {
+    background-color: #f5f4f2;
+}
+
+a {
+    text-decoration: none;
+}

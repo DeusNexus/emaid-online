@@ -1,0 +1,584 @@
+@media screen and (max-width: 1366px) {
+    body p, i, b {
+        font-size: 20px;
+    }
+    body h1 {
+        font-size: 30px;
+        font-weight: 100;
+    }
+    body h2 {
+        font-size: 26px;
+    }
+    body code {
+        font-size: 21px;
+    }
+    body a {
+        font-size: 21px;
+    }
+    body button {
+        font-size: 21px;
+    }
+
+    p.safe-title {
+        font-size: 40px;
+    }
+
+    p.safe-undertitle {
+        font-size: 25px;
+    }
+
+    p.safe-community-title {
+        font-size: 16px;
+        color: gray;
+    }
+
+    div.titles {
+        background-color: antiquewhite;
+        padding: 20px;
+        border-radius: 8px;
+    }
+
+    div.refresh-status-div {
+        flex-direction: row;
+        justify-content: space-around;
+        height: 15px;
+        width: 80%;
+        margin: 10px 25px 45px;
+    }
+
+    div.refresh-status-div .refresh-div {
+       margin: 0px 15px;
+    }
+    
+    div.refresh-status-div .status {
+        margin: 0px 15px;
+    }
+
+    div.refresh-status-div .refresh-div p {
+        font-size: 14px;
+    }
+
+    div.refresh-status-div .status p {
+        font-size: 14px;
+    }
+
+    div.counters-div div.counter {
+        padding: 5px 10px;
+        min-width: 250px;
+        min-height: 175px;
+    }
+
+    div.app {
+        gap: 5px;
+    }
+
+    .app {
+        padding: 6%
+    }
+
+    .titles {
+        max-width: 33%;
+    }
+
+    .emaid-color {
+        margin-bottom: 12px;
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    body p, i, b {
+        font-size: 18px;
+    }
+    body h1 {
+        font-size: 26px;
+        font-weight: 100;
+    }
+    body h2 {
+        font-size: 24px;
+    }
+    body code {
+        font-size: 19px;
+    }
+    body a {
+        font-size: 19px;
+    }
+    body button {
+        font-size: 19px;
+    }
+
+    p.safe-title {
+        font-size: 35px;
+    }
+
+    p.safe-undertitle {
+        font-size: 14px;
+    }
+
+    p.safe-community-title {
+        font-size: 12px;
+        color: gray;
+    }
+
+    div.titles {
+        background-color: antiquewhite;
+        padding: 20px;
+        border-radius: 8px;
+    }
+
+    div.refresh-status-div {
+        flex-direction: column;
+        align-items: center;
+        height: 15px;
+        width: 550px;
+        margin: 10px 0px 50px;
+    }
+
+    div.refresh-status-div .refresh-div {
+        margin-bottom: 15px;
+        width: 100%;
+    }
+
+    div.refresh-status-div .refresh-div p {
+        font-size: 14px;
+    }
+
+    div.refresh-status-div .status {
+        width: 100%;
+    }
+
+    div.refresh-status-div .status p {
+        font-size: 14px;
+    }
+
+    div.counters-div div.counter {
+        padding: 5px 10px;
+        min-width: 100px;
+    }
+
+    div.app {
+        gap: 5px;
+    }
+
+    .app {
+        padding: 5%
+    }
+
+    .titles {
+        max-width: 40%;
+    }
+
+    .emaid-color {
+        margin-bottom: 4px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    body p, i, b {
+        font-size: 16px;
+    }
+    body h1 {
+        font-size: 22px;
+        font-weight: 100;
+    }
+    body h2 {
+        font-size: 20px;
+    }
+    body code {
+        font-size: 17px;
+    }
+    body a {
+        font-size: 17px;
+    }
+    body button {
+        font-size: 17px;
+    }
+
+    p.safe-title {
+        font-size: 24px;
+    }
+
+    p.safe-undertitle {
+        font-size: 14px;
+    }
+
+    p.safe-community-title {
+        font-size: 12px;
+        color: gray;
+    }
+
+    div.titles {
+        background-color: antiquewhite;
+        padding: 20px;
+        border-radius: 8px;
+    }
+
+    div.counters-div div.counter {
+        padding: 5px 10px;
+        min-width: 100px;
+    }
+
+    div.refresh-status-div {
+        flex-direction: column;
+        align-items: center;
+        height: 15px;
+        width: 400px;
+        margin: 10px 0px 50px;
+    }
+
+    div.refresh-status-div .refresh-div {
+        margin-bottom: 15px;
+        width: 100%;
+    }
+
+    div.refresh-status-div .refresh-div p {
+        font-size: 14px;
+    }
+
+    div.refresh-status-div .status {
+        width: 100%;
+    }
+
+    div.refresh-status-div .status p {
+        font-size: 14px;
+    }
+
+    div.counters-div div.counter {
+        padding: 5px 10px;
+        min-width: 100px;
+    }
+
+    div.app {
+        gap: 12px;
+    }
+
+    .app {
+        padding: 4%
+    }
+
+    .titles {
+        max-width: 50%;
+    }
+
+    .emaid-color {
+        margin-bottom: 2px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    body p, i, b {
+        font-size: 12px;
+    }
+
+    body h1 {
+        font-size: 16px;
+        font-weight: 100;
+    }
+    body h2 {
+        font-size: 14px;
+    }
+    body code {
+        font-size: 13px;
+    }
+    body a {
+        font-size: 13px;
+    }
+    body button {
+        font-size: 13px;
+    }
+
+    p.safe-title {
+        font-size: 24px;
+    }
+
+    p.safe-undertitle {
+        font-size: 14px;
+    }
+
+    p.safe-community-title {
+        font-size: 12px;
+        color: gray;
+    }
+
+    div.titles {
+        background-color: antiquewhite;
+        padding: 20px;
+        border-radius: 8px;
+    }
+
+    div.counters-div div.counter {
+        padding: 5px 10px;
+    }
+
+    div.refresh-status-div {
+        flex-direction: column;
+        align-items: center;
+        height: 15px;
+        width: 250px;
+        margin-bottom: 40px;
+    }
+
+    div.refresh-status-div .refresh-div {
+        margin-bottom: 10px;
+        width: 100%;
+    }
+
+    div.refresh-status-div .refresh-div p {
+        font-size: 11px;
+    }
+
+    div.refresh-status-div .status {
+        width: 100%;
+    }
+
+    div.refresh-status-div .status p {
+        font-size: 11px;
+    }
+
+    div.counters-div div.counter {
+        padding: 0px 0px;
+    }
+
+    div.app {
+        gap: 5px;
+    }
+
+    .app {
+        padding: 2%
+    }
+
+    .titles {
+        max-width: 66%;
+    }
+
+    .emaid-color {
+        margin-bottom: 2px;
+    }
+}
+
+.app {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 65vh;
+    gap: 25px;
+    padding: 6%
+    
+}
+
+.titles {
+    display: flex;
+    flex-direction: column;
+    flex: 2;
+    flex-wrap: wrap;
+    text-align: center;
+    justify-content: center;
+    margin: 25px;
+    max-width: 66%;
+}
+
+.titles p {
+    margin: 5px;
+}
+
+.safe-title {
+    color:#5fa3f2;
+    font-size: 60px;
+}
+
+.safe-undertitle {
+    color: #f05825;
+}
+
+.safe-community-title {
+    /* color: #000000; */
+    color: gray;
+}
+
+.counters-div {
+    background-color: #f5f4f2;
+    display: flex;
+    flex-direction: row;
+    flex: 5;
+    flex-wrap: wrap;
+    text-align: center;
+    justify-content: center;
+    margin-top: 10px;
+    margin-bottom: 25px;
+}
+
+.counter {
+    display: flex;
+    flex-direction: column;
+    flex: 2;
+    justify-content: center;
+    min-width: 250px;
+    min-height: 125px;
+    padding: 25px 50px;
+    border: black dotted 1px; 
+    box-shadow: rgb(0,0,0,0.2) 5px 5px;
+    margin: 5px 5px;    
+}
+
+.emaid {
+    background-color: #f05825; 
+    color: #f5f4f0;
+}
+
+.emaid-pending {
+    background-color: #a55ae1; 
+    color: #f5f4f0;
+}
+
+.omaid {
+    background-color: #f8f311; 
+    color: #43423d;
+}
+
+.combined {
+    background-color: #5fa3f2; 
+    color: #43423d;
+}
+
+.emaid-color {
+    color: #f05825; 
+}
+
+.omaid-color {
+    color: #5fa3f2; 
+}
+
+.btc {
+    background-color: orange;
+    color: black;
+}
+
+.external-links-div {
+    display: flex;
+    flex-direction: row;
+    flex: 1;
+    flex-wrap: wrap;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+}
+    
+
+.external-links a {
+    background-color: #5fa3f2;
+    color: white;
+    border-radius: 25px;
+    margin: 10px;
+    padding: 5px;
+    min-width: 33%;
+}
+
+.refresh-status-div {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    height: 50px;
+    width: 1200px;
+    padding: 10px 35px;
+    margin-bottom: 25px;
+}
+
+.refresh-div {
+    display: flex;
+    flex-direction: row;
+    flex: 2;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-content: center;
+    background-color: black;
+    color: white;
+    padding: 15px;
+    border-radius: 15px;
+    height: 100%;
+    margin: 15px;
+}
+
+.refresh-div p, button{
+    font-size: 16px;
+    font-weight: 1000;
+}
+
+.status {
+    display:flex;
+    flex-wrap: wrap;
+    flex: 4;
+    justify-content: center;
+    align-content: center;
+    padding: 15px;
+    border-radius: 15px;
+    height: 100%;
+}
+
+.status p {
+    font-size: 16px;
+    font-weight: 1000;
+}
+
+.footer {
+    text-align: center; 
+    background-color: rgba(255, 255, 255, 0.727);
+    border-radius: 25px;
+    max-width: 80%;
+    padding: 2%;
+    margin: 8px;
+}
+
+.api-urls-div {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+
+.api-urls-div b,code {
+    overflow-wrap: anywhere;
+}
+
+.emaid-color {
+    margin-bottom: 12px;
+}
+
+.footer-b p {
+    margin: 5px;
+}
+
+.contact-div {
+    display: flex;
+    flex-direction: column;
+    flex: 1;    
+}
+
+.contact-div i {
+    font-size: 14px;
+}
+
+.ticker-div {
+    background-color: #f5f4f2;
+    display: flex;
+    flex-direction: row;
+    flex: 5;
+    flex-wrap: wrap;
+    text-align: center;
+    justify-content: center;
+}
+
+.ticker {
+    margin: 5px 5px;
+    padding: 10px 8px;
+    border-radius: 2px;
+    width: 200px;
+    height: 25px;
+}
+
+.ticker-symbol {
+    font-size: 12px;
+}
+
+.ticker-value {
+    font-size: 15px;
+}
