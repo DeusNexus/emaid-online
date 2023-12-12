@@ -67,6 +67,8 @@ eMAID Ethereum Contract: https://etherscan.io/token/0x329c6e459ffa7475718838145e
 Omni MAID Burn Address: https://www.omniexplorer.info/address/1LastStepBurnMaidToEMaidXXXXUJ9ChK
 
 ## Dependencies
+    Node & npm
+    Python 3.10 or higher
     React
     Flask
     requests
