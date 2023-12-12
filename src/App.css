@@ -582,3 +582,16 @@
 .ticker-value {
     font-size: 15px;
 }
+
+.app.flash {
+    animation: flash 1s infinite alternate;
+}
+  
+@keyframes flash {
+    from {
+        opacity: 1;
+    }
+    to {
+        opacity: 0;
+    }
+}

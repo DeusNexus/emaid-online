@@ -32,17 +32,30 @@ function App() {
     },
     "token1Price": "-1"
   })
+  // New state for flashing effect
+  const [flash, setFlash] = useState(false);
   
   async function getAPI() {
     const response = await fetch('/api',);
     const { omni_burned, gnosis_pending, smart_contract_minted, last_update, burned_percentage_total_maid, maid_total_circulating_cap, uniswap_data } = await response.json();
+    
     setBurnTotal(omni_burned);
     setQueueAmount(gnosis_pending);
     setEmaidTotal(smart_contract_minted);
-    setLastUpdate(last_update);
     setBurnedPercentage(burned_percentage_total_maid)
     setMaidCirculating(maid_total_circulating_cap)
     setUniswapTicker(uniswap_data)
+
+    // Set the flash state to true to trigger the flashing effect
+    setFlash(true);
+
+    // Set a timeout to reset the flash state after a certain duration
+    setTimeout(() => {
+      setFlash(false);
+    }, 1000);
+
+    // Update the last update time
+    setLastUpdate(last_update);
     console.log(omni_burned, gnosis_pending, smart_contract_minted, last_update, burnedPercentage, maidCirculating, uniswapTicker)
   }
 
@@ -60,7 +73,7 @@ function App() {
   }, []);
 
   return (
-    <div className='app'>
+    <div className={`app ${flash ? 'flash' : ''}`}>
         <div className='titles'>
           <p className='safe-title'>Safe Network: Privacy. Security. Freedom.</p>
           <p className='safe-undertitle'>Users of the SAFE Network have full control over their data, while software developers can focus their time building on top of a secure infrastructure.</p>
