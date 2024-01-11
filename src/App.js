@@ -1,6 +1,7 @@
 import './App.css';
-import {useState, useEffect} from 'react'
+import { useState, useEffect } from 'react'
 import React from 'react';
+import TopBar from './TopBar';
 
 function App() {
   const [burnTotal, setBurnTotal] = useState('');
@@ -34,25 +35,25 @@ function App() {
   })
   const [bitmartTicker, setBitmartTicker] = useState({
     "symbol": "EMAID_USDT",
-    "last": "0",
-    "v_24h": "0",
-    "qv_24h":  "0",
-    "open_24h":  "0",
-    "high_24h":  "0",
-    "low_24h":  "0",
-    "fluctuation":  "0",
-    "bid_px":  "0",
-    "bid_sz":  "0",
-    "ask_px":  "0",
-    "ask_sz":  "0",
-    "ts":  "0"
+    "last": "-1",
+    "v_24h": "-1",
+    "qv_24h":  "-1",
+    "open_24h":  "-1",
+    "high_24h":  "-1",
+    "low_24h":  "-1",
+    "fluctuation":  "-1",
+    "bid_px":  "-1",
+    "bid_sz":  "-1",
+    "ask_px":  "-1",
+    "ask_sz":  "-1",
+    "ts":  "-1"
   })
   // New state for flashing effect
   const [flash, setFlash] = useState(false);
   
   async function getAPI() {
     const response = await fetch('/api',);
-    const { omni_burned, gnosis_pending, smart_contract_minted, last_update, burned_percentage_total_maid, maid_total_circulating_cap, uniswap_data } = await response.json();
+    const { omni_burned, gnosis_pending, smart_contract_minted, last_update, burned_percentage_total_maid, maid_total_circulating_cap, uniswap_data, bitmart_data } = await response.json();
     
     setBurnTotal(omni_burned);
     setQueueAmount(gnosis_pending);
@@ -88,8 +89,32 @@ function App() {
     return () => clearInterval(interval);
   }, []);
 
+  const ext_links = [
+    { id: 1, url: 'https://safenetwork.org/', text: 'Safe Network Primer' },
+    { id: 2, url: 'https://safenetforum.org/', text: 'Safe Network Forum' },
+    { id: 3, url: 'https://maidsafe.net/', text: 'MaidSafe Company' },
+    { id: 4, url: 'https://alt.co/', text: 'Altcoinomy' },
+  ];
+
+  const tickers = [
+    { 
+      label: 'Uniswap eMAID/USDC', 
+      price: parseFloat(uniswapTicker['token1Price']).toFixed(3) 
+    },
+    { 
+      label: 'Uniswap USDC/eMAID', 
+      price: parseFloat(uniswapTicker['token0Price']).toFixed(3) 
+    },
+    { 
+      label: 'BitMart eMAID/USDT', 
+      price: parseFloat(bitmartTicker['last']).toFixed(3) 
+    }
+  ];
+
   return (
     <div className='app'>
+        <TopBar links={ext_links} tickers={tickers}/>
+
         <div className='titles'>
           <p className='safe-title'>Safe Network: Privacy. Security. Freedom.</p>
           <p className='safe-undertitle'>Users of the SAFE Network have full control over their data, while software developers can focus their time building on top of a secure infrastructure.</p>
@@ -120,27 +145,39 @@ function App() {
         </div>
 
         <div className={`refresh-status-div ${flash ? 'flash' : ''}`}>
+          <div className='status' style={(burnTotal >= emaidTotal + queueAmount )?{backgroundColor: 'lightgreen'}:{backgroundColor:'red'}}>
+            <p style={{color:'white'}}>{(burnTotal >= emaidTotal + queueAmount ) ? '[OK] The total burned amount is larger or equal to the combined amount of eMAID minted and in the queue.' : '[Alert] The  total of minted eMAID + eMAID queued to be minted is larger than the burned MAID.'}</p>
+          </div>
           <div className='refresh-div'>
             <p>Last updated UTC: </p>
             <p>{lastUpdate}</p>
-          </div>
-          <div className='status' style={(burnTotal >= emaidTotal + queueAmount )?{backgroundColor: 'lightgreen'}:{backgroundColor:'red'}}>
-            <p style={{color:'white'}}>{(burnTotal >= emaidTotal + queueAmount ) ? '[OK] The total burned amount is larger or equal to the combined amount of eMAID minted and in the queue.' : '[Alert] The  total of minted eMAID + eMAID queued to be minted is larger than the burned MAID.'}</p>
           </div>
         </div>
 
         <div className='footer'>
           <div className='api-urls-div'>
-            <p><b>eMAID Gnosis Minting Queue</b></p>
-            <a href='https://app.safe.global/eth:0x981B048fec7CB1ADE6e331691DF339c2F833D165/transactions/queue' className='emaid-color'><code>https://app.safe.global/eth:0x981B048fec7CB1ADE6e331691DF339c2F833D165/transactions/queue</code></a>
-            <p><b>eMAID Ethereum Contract</b></p>
-            <a href='https://etherscan.io/token/0x329c6e459ffa7475718838145e5e85802db2a303' className='emaid-color'><code>https://etherscan.io/token/0x329c6e459ffa7475718838145e5e85802db2a303</code></a>
-            <p><b>Omni MAID Burn Address - Do NOT send any MAID here before completing the Altcoinomy progress!</b></p>
-            <a href='https://www.omniexplorer.info/address/1LastStepBurnMaidToEMaidXXXXUJ9ChK' className='omaid-color'><code>https://www.omniexplorer.info/address/1LastStepBurnMaidToEMaidXXXXUJ9ChK</code></a>
+            <h1>Migration Links</h1>
+            <p>Do NOT send any MAID here before completing the Altcoinomy progress!</p>
+            <div>
+              <ul>
+                <li>
+                  <a className='omaid-color' href='https://www.omniexplorer.info/address/1LastStepBurnMaidToEMaidXXXXUJ9ChK'>Omni MAID Burn Address</a>
+                </li>
+                <li>
+                  <a className='emaid-color' href='https://app.safe.global/eth:0x981B048fec7CB1ADE6e331691DF339c2F833D165/transactions/queue'>eMAID Gnosis Minting Queue</a>
+                </li>
+                <li>
+                  <a className='emaid-color' href='https://etherscan.io/token/0x329c6e459ffa7475718838145e5e85802db2a303'>eMAID Ethereum Contract</a>
+                </li>
+                <li>
+                  <a className='emaid-color' href='https://info.uniswap.org/#/pools/0x35593881b7723b39a5bdbcb421e55c1ff1953f4b'>Uniswap eMAID/USDC</a>
+                </li>
+              </ul>
+            </div>
           </div>
         </div>
 
-        <div className='ticker-div'>
+        {/* <div className='ticker-div'>
           <div className='ticker emaid'>
             <p className='ticker-symbol'>Uniswap eMAID/USDC: </p>
             <p className='ticker-value'>{parseFloat(uniswapTicker['token1Price']).toFixed(3)}</p>
@@ -151,16 +188,13 @@ function App() {
           </div>
           <div className='ticker emaid'>
             <p className='ticker-symbol'>BitMart eMAID/USDT: </p>
-            <p className='ticker-value'>{parseFloat(bitmartTicker['token1Price']).toFixed(3)}</p>
+            <p className='ticker-value'>{parseFloat(bitmartTicker['last']).toFixed(3)}</p>
           </div>
-        </div>
+        </div> */}
 
-        <div className='external-links external-links-div'>
-          <a href='https://safenetwork.org/'>Safe Network Primer</a>
-          <a href='https://safenetforum.org/'>Safe Network Forum</a>
-          <a href='https://maidsafe.net/'>MaidSafe Company</a>
-          <a href='https://alt.co/'>Altcoinomy</a>
-        </div>
+        {/* <div className='external-links external-links-div'>
+          
+        </div> */}
 
         <div className='footer-b'>
           <div className='contact-div'>

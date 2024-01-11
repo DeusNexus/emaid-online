@@ -14,6 +14,7 @@ state = {
     "burned_percentage_total_maid":-1,
     "maid_total_circulating_cap": 452552412,
     "uniswap_data": -1,
+    "bitmart_data":-1
 }
 
 def set_interval(func, sec):
@@ -153,6 +154,18 @@ def uniswapv3():
     except Exception as e:
         print(datetime.isoformat(datetime.now()),"Error occured at UniswapV3!", e)
 
+def bitmart():
+    try:
+        URL = 'https://api-cloud.bitmart.com/spot/quotation/v3/ticker?symbol=EMAID_USDT'
+        req = requests.get(URL)
+        data = req.json()['data']
+
+        print(datetime.isoformat(datetime.now()),f"BitMart Updated: {data['symbol']} {data['last']}")
+        return data
+
+    except Exception as e:
+        print(datetime.isoformat(datetime.now()),"Error occured at BitMart API!", e)
+
 def last_update():
     last_update_str = datetime.utcnow().strftime('%m/%d/%Y %H:%M:%S %Z')
     print( datetime.isoformat(datetime.now()) ,last_update_str)
@@ -164,6 +177,7 @@ def update_api():
     state["smart_contract_minted"] = get_smart_contract()
     state["burned_percentage_total_maid"] = round((state["smart_contract_minted"] / state['maid_total_circulating_cap']) * 100, 5)
     state["uniswap_data"] = uniswapv3()
+    state["bitmart_data"] = bitmart()
     state["last_update"] = last_update()
     print('\n')
 

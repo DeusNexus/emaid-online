@@ -360,8 +360,8 @@
     flex-direction: column;
     align-items: center;
     min-height: 65vh;
-    gap: 25px;
-    padding: 6%
+    gap: 35px;
+    padding: 8%
     
 }
 
@@ -521,7 +521,7 @@
 }
 
 .footer {
-    text-align: center; 
+    text-align: left; 
     background-color: rgba(255, 255, 255, 0.727);
     border-radius: 25px;
     max-width: 80%;
@@ -533,6 +533,19 @@
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
+}
+
+.api-urls-div h1 {
+    margin-bottom: 5px;
+}
+
+.api-urls-div p {
+    margin-bottom: 10px;
+    color:gray;
+}
+
+.api-urls-div ul {
+    margin-left: 25px;
 }
 
 .api-urls-div b,code {
@@ -555,32 +568,6 @@
 
 .contact-div i {
     font-size: 14px;
-}
-
-.ticker-div {
-    background-color: #f5f4f2;
-    display: flex;
-    flex-direction: row;
-    flex: 5;
-    flex-wrap: wrap;
-    text-align: center;
-    justify-content: center;
-}
-
-.ticker {
-    margin: 5px 5px;
-    padding: 10px 8px;
-    border-radius: 2px;
-    width: 200px;
-    height: 25px;
-}
-
-.ticker-symbol {
-    font-size: 12px;
-}
-
-.ticker-value {
-    font-size: 15px;
 }
 
 .refresh-status-div.flash {
