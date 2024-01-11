@@ -4,10 +4,15 @@ import React from 'react';
 import TopBar from './TopBar';
 
 function App() {
+  // New state for flashing effect
+  const [flash, setFlash] = useState(false);
+
   const [burnTotal, setBurnTotal] = useState('');
   const [queueAmount, setQueueAmount] = useState('');
   const [emaidTotal, setEmaidTotal] = useState('');
-  const [lastUpdate, setLastUpdate] = useState('Never')
+  
+  const [lastUpdate, setLastUpdate] = useState('')
+
   const [burnedPercentage, setBurnedPercentage] = useState('')
   const [maidCirculating, setMaidCirculating] = useState('')
   const [uniswapTicker, setUniswapTicker] = useState({
@@ -48,13 +53,11 @@ function App() {
     "ask_sz":  "-1",
     "ts":  "-1"
   })
-  // New state for flashing effect
-  const [flash, setFlash] = useState(false);
   
   async function getAPI() {
     const response = await fetch('/api',);
     const { omni_burned, gnosis_pending, smart_contract_minted, last_update, burned_percentage_total_maid, maid_total_circulating_cap, uniswap_data, bitmart_data } = await response.json();
-    
+
     setBurnTotal(omni_burned);
     setQueueAmount(gnosis_pending);
     setEmaidTotal(smart_contract_minted);
@@ -62,19 +65,22 @@ function App() {
     setMaidCirculating(maid_total_circulating_cap)
     setUniswapTicker(uniswap_data)
     setBitmartTicker(bitmart_data)
-
-    // Set the flash state to true to trigger the flashing effect
-    setFlash(true);
-
-    // Set a timeout to reset the flash state after a certain duration
-    setTimeout(() => {
-      setFlash(false);
-    }, 1000);
-
-    // Update the last update time
     setLastUpdate(last_update);
+
     console.log(omni_burned, gnosis_pending, smart_contract_minted, last_update, burnedPercentage, maidCirculating, uniswapTicker)
   }
+
+  useEffect(() => {
+    setFlash(true);
+  
+    // Set a timeout to reset the flash state after a certain duration
+    const timeoutId = setTimeout(() => {
+      setFlash(false);
+    }, 1000);
+  
+    // Clear the timeout if the component unmounts or lastUpdate changes
+    return () => clearTimeout(timeoutId);
+  }, [lastUpdate]);
 
   useEffect(() => {
     getAPI();     
@@ -84,7 +90,7 @@ function App() {
     const interval = setInterval(() => {
       console.log('Retrieving new update from API!');
       getAPI();
-    }, 10000);
+    }, 1000);
   
     return () => clearInterval(interval);
   }, []);
@@ -176,25 +182,6 @@ function App() {
             </div>
           </div>
         </div>
-
-        {/* <div className='ticker-div'>
-          <div className='ticker emaid'>
-            <p className='ticker-symbol'>Uniswap eMAID/USDC: </p>
-            <p className='ticker-value'>{parseFloat(uniswapTicker['token1Price']).toFixed(3)}</p>
-          </div>
-          <div className='ticker emaid'>
-            <p className='ticker-symbol'>Uniswap USDC/eMAID: </p>
-            <p className='ticker-value'>{parseFloat(uniswapTicker['token0Price']).toFixed(3)}</p>
-          </div>
-          <div className='ticker emaid'>
-            <p className='ticker-symbol'>BitMart eMAID/USDT: </p>
-            <p className='ticker-value'>{parseFloat(bitmartTicker['last']).toFixed(3)}</p>
-          </div>
-        </div> */}
-
-        {/* <div className='external-links external-links-div'>
-          
-        </div> */}
 
         <div className='footer-b'>
           <div className='contact-div'>

@@ -34,16 +34,18 @@
 
     div.titles {
         background-color: antiquewhite;
-        padding: 20px;
+        padding: 10px;
         border-radius: 8px;
+        margin-top: 35px;
+        margin-bottom: 20px;
     }
 
     div.refresh-status-div {
         flex-direction: row;
         justify-content: space-around;
-        height: 15px;
-        width: 80%;
-        margin: 10px 25px 45px;
+        height: 30px;
+        width: 90%;
+        margin: 0px 15px 15px;
     }
 
     div.refresh-status-div .refresh-div {
@@ -123,18 +125,20 @@
         background-color: antiquewhite;
         padding: 20px;
         border-radius: 8px;
+        margin-top: 50px;
+        margin-bottom: 20px;
     }
 
     div.refresh-status-div {
         flex-direction: column;
         align-items: center;
-        height: 15px;
+        height: 25px;
         width: 550px;
-        margin: 10px 0px 50px;
+        margin: 10px 0px 55px;
     }
 
     div.refresh-status-div .refresh-div {
-        margin-bottom: 15px;
+        margin-top: 10px;
         width: 100%;
     }
 
@@ -144,6 +148,8 @@
 
     div.refresh-status-div .status {
         width: 100%;
+        margin-top: 25px;
+        margin-bottom: 0px;
     }
 
     div.refresh-status-div .status p {
@@ -208,25 +214,27 @@
 
     div.titles {
         background-color: antiquewhite;
-        padding: 20px;
+        padding: 60px;
         border-radius: 8px;
+        margin-top: 50px;
+        margin-bottom: 5px;
     }
 
     div.counters-div div.counter {
-        padding: 5px 10px;
+        padding: 5px 15px;
         min-width: 100px;
     }
 
     div.refresh-status-div {
         flex-direction: column;
         align-items: center;
-        height: 15px;
+        height: 60px;
         width: 400px;
-        margin: 10px 0px 50px;
+        margin: 10px 0px 40px;
     }
 
     div.refresh-status-div .refresh-div {
-        margin-bottom: 15px;
+        margin-top: 10px;
         width: 100%;
     }
 
@@ -236,6 +244,8 @@
 
     div.refresh-status-div .status {
         width: 100%;
+        margin-top: 25px;
+        margin-bottom: 0px;
     }
 
     div.refresh-status-div .status p {
@@ -300,25 +310,28 @@
     }
 
     div.titles {
+        margin-top: 60px;
+        margin-bottom: 10px;
         background-color: antiquewhite;
-        padding: 20px;
+        padding: 10px;
         border-radius: 8px;
     }
 
     div.counters-div div.counter {
-        padding: 5px 10px;
+        padding: 5px 5px;
     }
 
     div.refresh-status-div {
         flex-direction: column;
         align-items: center;
-        height: 15px;
+        height: 60px;
         width: 250px;
-        margin-bottom: 40px;
+        margin-top: 10px;
+        margin-bottom: 20px;
     }
 
     div.refresh-status-div .refresh-div {
-        margin-bottom: 10px;
+        margin-top: 10px;
         width: 100%;
     }
 
@@ -332,6 +345,10 @@
 
     div.refresh-status-div .status p {
         font-size: 11px;
+    }
+
+    div.counters-div {
+        margin-top: 0;
     }
 
     div.counters-div div.counter {
@@ -563,7 +580,11 @@
 .contact-div {
     display: flex;
     flex-direction: column;
-    flex: 1;    
+    align-items: center; /* Center horizontally */
+    justify-content: center; /* Center vertically */
+    text-align: center;
+    flex: 1;
+    max-width: 100%;
 }
 
 .contact-div i {
