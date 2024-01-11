@@ -32,6 +32,21 @@ function App() {
     },
     "token1Price": "-1"
   })
+  const [bitmartTicker, setBitmartTicker] = useState({
+    "symbol": "EMAID_USDT",
+    "last": "0",
+    "v_24h": "0",
+    "qv_24h":  "0",
+    "open_24h":  "0",
+    "high_24h":  "0",
+    "low_24h":  "0",
+    "fluctuation":  "0",
+    "bid_px":  "0",
+    "bid_sz":  "0",
+    "ask_px":  "0",
+    "ask_sz":  "0",
+    "ts":  "0"
+  })
   // New state for flashing effect
   const [flash, setFlash] = useState(false);
   
@@ -45,6 +60,7 @@ function App() {
     setBurnedPercentage(burned_percentage_total_maid)
     setMaidCirculating(maid_total_circulating_cap)
     setUniswapTicker(uniswap_data)
+    setBitmartTicker(bitmart_data)
 
     // Set the flash state to true to trigger the flashing effect
     setFlash(true);
@@ -126,12 +142,16 @@ function App() {
 
         <div className='ticker-div'>
           <div className='ticker emaid'>
-            <p className='ticker-symbol'>eMAID/USDC Price: </p>
+            <p className='ticker-symbol'>Uniswap eMAID/USDC: </p>
             <p className='ticker-value'>{parseFloat(uniswapTicker['token1Price']).toFixed(3)}</p>
           </div>
           <div className='ticker emaid'>
-            <p className='ticker-symbol'>USDC/eMAID Price: </p>
+            <p className='ticker-symbol'>Uniswap USDC/eMAID: </p>
             <p className='ticker-value'>{parseFloat(uniswapTicker['token0Price']).toFixed(3)}</p>
+          </div>
+          <div className='ticker emaid'>
+            <p className='ticker-symbol'>BitMart eMAID/USDT: </p>
+            <p className='ticker-value'>{parseFloat(bitmartTicker['token1Price']).toFixed(3)}</p>
           </div>
         </div>
 
