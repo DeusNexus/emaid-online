@@ -126,6 +126,7 @@ def uniswapv3():
             }
         '''
         req = requests.post(URL, headers={'Content-Type':'application/json'},json={'query': query})
+        print("Uniswap Response:",req)
         data = req.json()['data']['pool']
 
         print(datetime.isoformat(datetime.now()),f"Uniswap Updated: {data['token0Price']} {data['token1Price']}")
