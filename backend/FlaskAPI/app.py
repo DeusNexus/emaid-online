@@ -119,7 +119,7 @@ def get_gnosis_queue():
 
 def uniswapv3():
     try:
-        URL = 'https://api.thegraph.com/subgraphs/name/uniswap/uniswap-v3'
+        URL = 'https://api.thegraph.com/subgraphs/id/HUZDsR—Sg4H3B'
         query = '''
             {
                 pool(id: "0x35593881b7723b39a5bdbcb421e55c1ff1953f4b") {
