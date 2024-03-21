@@ -120,12 +120,8 @@ def get_gnosis_queue():
 def uniswapv3():
     try:
         URL = 'https://gateway-arbitrum.network.thegraph.com/api/d298f4ad0c843c5e8af2167ae4efa1d0/subgraphs/id/HUZDsRpEVP2AvzDCyzDHtdc64dyDxx8FQjzsmqSg4H3B'
-        query = '''
-            {
-            "query": "{ pool(id: \"0x35593881b7723b39a5bdbcb421e55c1ff1953f4b\") { id feeTier token0Price token1Price token0 { id name symbol } token1 { id name symbol } tick ticks { tickIdx liquidityNet } } }"
-            }
-        '''
-        req = requests.post(URL, headers={'Content-Type':'application/json'},json={'query': query})
+        query = {"query": "{ pool(id: \"0x35593881b7723b39a5bdbcb421e55c1ff1953f4b\") { id feeTier token0Price token1Price token0 { id name symbol } token1 { id name symbol } tick ticks { tickIdx liquidityNet } } }"}
+        req = requests.post(URL, headers={'Content-Type':'application/json'},json=query)
         print("Uniswap Response:",req.json())
         data = req.json()['data']['pool']
 
