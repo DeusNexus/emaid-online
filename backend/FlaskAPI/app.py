@@ -122,30 +122,10 @@ def uniswapv3():
         URL = 'https://gateway-arbitrum.network.thegraph.com/api/d298f4ad0c843c5e8af2167ae4efa1d0/subgraphs/id/HUZDsRpEVP2AvzDCyzDHtdc64dyDxx8FQjzsmqSg4H3B'
         query = '''
             {
-                pool(id: "0x35593881b7723b39a5bdbcb421e55c1ff1953f4b") {
-                    id
-                    feeTier
-                    token0Price
-                    token1Price
-                    token0 {
-                        id
-                        name
-                        symbol
-                    }
-                    token1 {
-                        id
-                        name
-                        symbol
-                    }
-                    tick
-                    ticks {
-          			    tickIdx
-          			    liquidityNet
-            	    }
-                }
+            "query": "{ pool(id: \"0x35593881b7723b39a5bdbcb421e55c1ff1953f4b\") { id feeTier token0Price token1Price token0 { id name symbol } token1 { id name symbol } tick ticks { tickIdx liquidityNet } } }"
             }
         '''
-        req = requests.post(URL, json={'query': query})
+        req = requests.post(URL, headers={'Content-Type':'application/json'},json={'query': query})
         data = req.json()['data']['pool']
 
         print(datetime.isoformat(datetime.now()),f"Uniswap Updated: {data['token0Price']} {data['token1Price']}")
