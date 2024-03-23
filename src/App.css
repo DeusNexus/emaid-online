@@ -4,7 +4,7 @@
     }
     body h1 {
         font-size: 30px;
-        font-weight: 100;
+        /* font-weight: 100; */
     }
     body h2 {
         font-size: 26px;
@@ -29,7 +29,7 @@
 
     p.safe-community-title {
         font-size: 16px;
-        color: gray;
+        /* color: gray; */
     }
 
     div.titles {
@@ -93,7 +93,7 @@
     }
     body h1 {
         font-size: 26px;
-        font-weight: 100;
+        /* font-weight: 100; */
     }
     body h2 {
         font-size: 24px;
@@ -118,7 +118,7 @@
 
     p.safe-community-title {
         font-size: 12px;
-        color: gray;
+        /* color: gray; */
     }
 
     div.titles {
@@ -178,13 +178,13 @@
     }
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 850px) {
     body p, i, b {
         font-size: 16px;
     }
     body h1 {
         font-size: 22px;
-        font-weight: 100;
+        /* font-weight: 100; */
     }
     body h2 {
         font-size: 20px;
@@ -209,7 +209,7 @@
 
     p.safe-community-title {
         font-size: 12px;
-        color: gray;
+        /* color: gray; */
     }
 
     div.titles {
@@ -280,7 +280,7 @@
     }
 
     body h1 {
-        font-size: 16px;
+        /* font-size: 16px; */
         font-weight: 100;
     }
     body h2 {
@@ -306,7 +306,7 @@
 
     p.safe-community-title {
         font-size: 12px;
-        color: gray;
+        /* color: gray; */
     }
 
     div.titles {
@@ -378,7 +378,7 @@
     align-items: center;
     min-height: 65vh;
     gap: 35px;
-    padding: 8%
+    padding-top: 5%
     
 }
 
@@ -408,7 +408,7 @@
 
 .safe-community-title {
     /* color: #000000; */
-    color: #ff3355;
+    color: #26264c;
 }
 
 .counters-div {
@@ -565,24 +565,50 @@
 }
 
 .footer {
-    text-align: left; 
-    background-color: rgba(255, 255, 255, 0.727);
-    border-radius: 25px;
-    max-width: 80%;
-    padding: 2%;
-    margin: 8px;
+    color: #26264c; /* replace with your website's primary color code */
+    background-color: #FFF; /* replace with your website's background color */
+    padding: 20px;
+    text-align: left; /* or left, if you prefer */
+}
+
+.footer li {
+    margin: 10px 0;
+}
+
+.footer ul {
+    list-style: none; /* Uncomment this line to remove default list styling */
+    padding: 0;
+    margin: 0; /* It's good practice to reset default margins for lists */
+}
+
+.footer a {
+    color: #ff3355; /* replace with your preferred link color */
+    /* text-decoration: none; */
+    transition: color 0.3s ease;
+}
+
+.footer a:hover {
+    color: #ff3355; /* replace with the color when hovering */
+    text-decoration: underline; /* or you can change to 'none' */
+}
+
+/* If using icons */
+.footer i {
+    margin-right: 5px;
 }
 
 .footer-b p {
-    margin: 5px;
+    color: #8994a3; /* replace with your preferred link color */
+    text-decoration: none;
+    transition: color 0.3s ease;
 }
 
 .contact-div {
     display: flex;
     flex-direction: column;
-    align-items: center; /* Center horizontally */
+    align-items: left; /* Center horizontally */
     justify-content: center; /* Center vertically */
-    text-align: center;
+    text-align: left;
     flex: 1;
     max-width: 100%;
 }

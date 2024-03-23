@@ -23,6 +23,7 @@
   color: white; /* Set link color to white */
   text-decoration: none;
   margin-right: 25px;
+  font-family: Poppins, sans-serif;
 }
 
 .ticker-container {
@@ -69,7 +70,7 @@ p b {
 @media screen and (min-width: 1024px) {
   .top-bar {
   height: 55px; /* Updated height to 30px */
-  background-color: #333;
+  background-color: #26264c;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -90,6 +91,7 @@ p b {
   font-weight: bolder;
   padding: 5px;
   font-size: 15px;
+  font-family: Poppins, sans-serif;
 }
 
 .ticker-container {
@@ -136,7 +138,7 @@ p b {
 @media screen and (max-width: 1024px) {
   .top-bar {
   height: 55px; /* Updated height to 30px */
-  background-color: #333;
+  background-color: #26264c;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -157,6 +159,7 @@ p b {
   font-weight: bolder;
   padding: 5px;
   font-size: 15px;
+  font-family: Poppins, sans-serif;
 }
 
 .ticker-container {
@@ -200,33 +203,34 @@ p b {
 }
 }
 
-@media screen and (max-width: 768px) {
-    .top-bar {
-    height: 55px; /* Updated height to 30px */
-    background-color: #333;
+@media screen and (max-width: 850px) {
+  .top-bar {
+    height: 60px; /* Updated height to 30px */
+    background-color: #26264c;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
-    padding: 5px 10px;
+    padding: 0 2px;
   }
 
   .links {
     display: flex;
-    flex-direction: row;
-    justify-content: space-between;
+    align-items: center;
     margin-top: 2px;
     padding: 3px;
-    background-color: black;
+    background-color: #ff3355;
     width: 100%; /* External links take up the first 50% */
+    height: 60%;
   }
 
   .links a {
     margin-right: 10px;
     margin-top:3px;
-    font-weight: bolder;
+    font-weight: bold;
     padding: 4px;
     font-size: 12px;
+    font-family: Poppins, sans-serif;
   }
 
   .ticker-container {
@@ -250,7 +254,7 @@ p b {
   }
 
   .ticker-symbol {
-    font-weight: bold;
+    font-weight: lighter;
     font-size: 12px;
   }
   
@@ -272,13 +276,13 @@ p b {
 
 @media screen and (max-width: 480px) {
   .top-bar {
-    height: 75px; /* Updated height to 30px */
-    background-color: #333;
+    height: 60px; /* Updated height to 30px */
+    background-color: #26264c;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
-    padding: 0 5px;
+    padding: 0 2px;
   }
 
   .links {
@@ -286,16 +290,18 @@ p b {
     align-items: center;
     margin-top: 2px;
     padding: 3px;
-    background-color: black;
+    background-color: #ff3355;
     width: 100%; /* External links take up the first 50% */
+    height: 60%;
   }
 
   .links a {
     margin-right: 10px;
     margin-top:3px;
-    font-weight: bolder;
+    font-weight: bold;
     padding: 4px;
     font-size: 12px;
+    font-family: Poppins, sans-serif;
   }
 
   .ticker-container {
@@ -319,7 +325,7 @@ p b {
   }
 
   .ticker-symbol {
-    font-weight: bold;
+    font-weight: normal;
     font-size: 12px;
   }
   
