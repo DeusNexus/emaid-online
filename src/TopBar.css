@@ -122,7 +122,7 @@ p b {
 .ticker-value {
   margin-left: 4px;
   color:lightgreen;
-  font-weight: lighter;
+  font-weight: bold;
   font-size: 14px;
 }
 
@@ -183,14 +183,14 @@ p b {
 }
 
 .ticker-symbol {
-  font-weight: bold;
+  font-weight: lighter;
   font-size: 12px;
 }
 
 .ticker-value {
   margin-left: 4px;
   color:lightgreen;
-  font-weight: lighter;
+  font-weight: bold;
   font-size: 14px;
 }
 
@@ -261,7 +261,7 @@ p b {
   .ticker-value {
     margin-left: 5px;
     color:lightgreen;
-    font-weight: lighter;
+    font-weight: bold;
     font-size: 12px;
   }
   
@@ -270,7 +270,7 @@ p b {
   }
 
   .hmove { 
-    animation: tickerh linear 10s infinite; 
+    animation: tickerh linear 15s infinite; 
   }
 }
 
@@ -325,14 +325,14 @@ p b {
   }
 
   .ticker-symbol {
-    font-weight: normal;
+    font-weight: lighter;
     font-size: 12px;
   }
   
   .ticker-value {
     margin-left: 5px;
     color:lightgreen;
-    font-weight: lighter;
+    font-weight: bold;
     font-size: 12px;
   }
   
