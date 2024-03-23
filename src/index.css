@@ -1,7 +1,7 @@
 * {
     margin: 0;
     padding: 0;
-    font-family: 'Radio Canada', sans-serif;
+    font-family: Poppins, sans-serif;
     font-size: 24px; 
 }
 
@@ -10,7 +10,7 @@ html {
 }
 
 body {
-    background-color: #f5f4f2;
+    background-color: #fff;
 }
 
 a {

@@ -96,8 +96,8 @@ function App() {
   }, []);
 
   const ext_links = [
-    { id: 1, url: 'https://safenetwork.org/', text: 'Safe Network Primer' },
-    { id: 2, url: 'https://safenetforum.org/', text: 'Safe Network Forum' },
+    { id: 1, url: 'https://www.autonomi.com/', text: 'Autonomi White Paper' },
+    { id: 2, url: 'https://autonomi.community/', text: 'Autonomi Forum' },
     { id: 3, url: 'https://maidsafe.net/', text: 'MaidSafe Company' },
     { id: 4, url: 'https://alt.co/', text: 'Altcoinomy' },
   ];
@@ -122,8 +122,8 @@ function App() {
         <TopBar links={ext_links} tickers={tickers}/>
 
         <div className='titles'>
-          <p className='safe-title'>Safe Network: Privacy. Security. Freedom.</p>
-          <p className='safe-undertitle'>Users of the SAFE Network have full control over their data, while software developers can focus their time building on top of a secure infrastructure.</p>
+          <p className='safe-title'>Autonomi Network: Privacy. Security. Freedom.</p>
+          <p className='safe-undertitle'>Users of the Autonomi Network have full control over their data, while software developers can focus their time building on top of a secure infrastructure.</p>
           <p className='safe-community-title'>Community Tracker for MaidSafeCoin to Ethereum eMAID</p>
         </div>
 

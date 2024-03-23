@@ -398,17 +398,17 @@
 }
 
 .safe-title {
-    color:#5fa3f2;
+    color:#ff3355;
     font-size: 60px;
 }
 
 .safe-undertitle {
-    color: #f05825;
+    color: #ff3355;
 }
 
 .safe-community-title {
     /* color: #000000; */
-    color: gray;
+    color: #ff3355;
 }
 
 .counters-div {
@@ -437,22 +437,22 @@
 }
 
 .emaid {
-    background-color: #f05825; 
-    color: #f5f4f0;
+    background-color: #f8f8fa; 
+    color: #8994a3;
 }
 
 .emaid-pending {
-    background-color: #a55ae1; 
+    background-color: #26264c; 
     color: #f5f4f0;
 }
 
 .omaid {
-    background-color: #f8f311; 
-    color: #43423d;
+    background-color: #8994a3; 
+    color: #FFF;
 }
 
 .combined {
-    background-color: #5fa3f2; 
+    background-color: #ff3355; 
     color: #43423d;
 }
 
@@ -537,15 +537,6 @@
     font-weight: 1000;
 }
 
-.footer {
-    text-align: left; 
-    background-color: rgba(255, 255, 255, 0.727);
-    border-radius: 25px;
-    max-width: 80%;
-    padding: 2%;
-    margin: 8px;
-}
-
 .api-urls-div {
     display: flex;
     flex-direction: column;
@@ -573,6 +564,15 @@
     margin-bottom: 12px;
 }
 
+.footer {
+    text-align: left; 
+    background-color: rgba(255, 255, 255, 0.727);
+    border-radius: 25px;
+    max-width: 80%;
+    padding: 2%;
+    margin: 8px;
+}
+
 .footer-b p {
     margin: 5px;
 }
@@ -589,6 +589,7 @@
 
 .contact-div i {
     font-size: 14px;
+    color: #ff3355;
 }
 
 .refresh-status-div.flash {

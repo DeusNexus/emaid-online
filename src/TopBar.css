@@ -4,12 +4,12 @@
   left: 0;
   right: 0;
   height: 50px; /* Updated height to 30px */
-  background-color: #333;
+  background-color: #26264c;
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 0 10px; /* Adjusted padding */
-  color: white;
+  color: #FFF;
   z-index: 1000;
 }
 
